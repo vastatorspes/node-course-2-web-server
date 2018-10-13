@@ -51,6 +51,13 @@ app.get('/about', (req, res) => {
     });
 })
 
+app.get('/project', (req, res) => {
+    // otomatis render dari folder views
+    res.render('project.hbs', {
+        pageTitle : 'Project'
+    });
+})
+
 app.get('/bad', (req, res) => {
     res.send({
         errorMessage : 'gabisa handle request'
